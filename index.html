@@ -152,28 +152,66 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-我的博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-创建私人博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/08/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/">我的博客</a>
+      <a class="article-title" href="/2020/05/10/%E5%88%9B%E5%BB%BA%E7%A7%81%E4%BA%BA%E5%8D%9A%E5%AE%A2/">创建私人博客</a>
     </h1>
   
 
         
-        <a href="/2020/05/08/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-05-08T12:02:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-08</time>
+        <a href="/2020/05/10/%E5%88%9B%E5%BB%BA%E7%A7%81%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
+  	<time datetime="2020-05-10T00:26:32.040Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>哈哈哈</p>
-<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>红红火火</p>
+        <h2 id="创建私人博客"><a href="#创建私人博客" class="headerlink" title="创建私人博客"></a>创建私人博客</h2><p>1、本地搭建博客(hexo)</p>
+<p>2、上传博客到git远端</p>
+<p>3、更新博客主题</p>
+<h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><h5 id="1、node-js"><a href="#1、node-js" class="headerlink" title="1、node.js"></a>1、node.js</h5><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">https://nodejs.org/en/</span></span><br></pre></td></tr></table></figure>
+
+<p>网站下载node.js的安装包，【下一步】到安装完成即可</p>
+<h5 id="2、切换npm到阿里镜像cnpm"><a href="#2、切换npm到阿里镜像cnpm" class="headerlink" title="2、切换npm到阿里镜像cnpm"></a>2、切换npm到阿里镜像cnpm</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --register=https://register.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<h5 id="3、下载安装hexo-cli"><a href="#3、下载安装hexo-cli" class="headerlink" title="3、下载安装hexo-cli"></a>3、下载安装hexo-cli</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<h3 id="搭建启用hexo"><a href="#搭建启用hexo" class="headerlink" title="搭建启用hexo"></a>搭建启用hexo</h3><h5 id="1、初始化【创建目录并切换目录初始化使用】"><a href="#1、初始化【创建目录并切换目录初始化使用】" class="headerlink" title="1、初始化【创建目录并切换目录初始化使用】"></a>1、初始化【创建目录并切换目录初始化使用】</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+
+<p>初始化后通过【hero -s】启动，即可通过localhost:4000访问</p>
+<h3 id="部署博客到GitHub-远端"><a href="#部署博客到GitHub-远端" class="headerlink" title="部署博客到GitHub 远端"></a>部署博客到GitHub 远端</h3><h5 id="1、在GitHub上创建同GitHub昵称到仓库"><a href="#1、在GitHub上创建同GitHub昵称到仓库" class="headerlink" title="1、在GitHub上创建同GitHub昵称到仓库"></a>1、在GitHub上创建同GitHub昵称到仓库</h5><p>例如：<a href="https://github.com/yuyuwangyi/yuyuwangyi.github.io" target="_blank" rel="noopener">yuyuwangyi.github.io</a> 【我的仓库名称】</p>
+<h5 id="2、本地安装hexo对于git的支持文件"><a href="#2、本地安装hexo对于git的支持文件" class="headerlink" title="2、本地安装hexo对于git的支持文件"></a>2、本地安装hexo对于git的支持文件</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<h5 id="3、修改配置文件"><a href="#3、修改配置文件" class="headerlink" title="3、修改配置文件"></a>3、修改配置文件</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim _config.yml</span><br></pre></td></tr></table></figure>
+
+<p>修改配置文件:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">		<span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">		<span class="attr">repo:</span> <span class="string">https://github.com/yuyuwangyi/yuyuwangyi.github.io.git</span></span><br><span class="line">		<span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="4、部署到git远端"><a href="#4、部署到git远端" class="headerlink" title="4、部署到git远端"></a>4、部署到git远端</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -d</span><br></pre></td></tr></table></figure>
+
+<h3 id="切换主题"><a href="#切换主题" class="headerlink" title="切换主题"></a>切换主题</h3><h5 id="1、下载yilia主题"><a href="#1、下载yilia主题" class="headerlink" title="1、下载yilia主题"></a>1、下载yilia主题</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
+
+<h5 id="2、修改配置文件-config-yml"><a href="#2、修改配置文件-config-yml" class="headerlink" title="2、修改配置文件_config.yml"></a>2、修改配置文件_config.yml</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim _config.yml</span><br></pre></td></tr></table></figure>
+
+<p>修改配置文件:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: yilia</span><br></pre></td></tr></table></figure>
+
+<h5 id="3、使用主题"><a href="#3、使用主题" class="headerlink" title="3、使用主题"></a>3、使用主题</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean    ##清理hexo</span><br><span class="line">hexo g        ##生成hexo</span><br><span class="line">hexo d        ##将修改的hexo推到远端git上</span><br></pre></td></tr></table></figure>
+
+<h3 id="其他hexo的命令"><a href="#其他hexo的命令" class="headerlink" title="其他hexo的命令"></a>其他hexo的命令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo n  '文章名称'  ##创建新的博客文章</span><br><span class="line">hexo s             ##启动hexo【一般本地预览使用】</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
 
       
 
@@ -186,82 +224,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/08/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/08/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/08/hello-world/" class="archive-article-date">
-  	<time datetime="2020-05-08T04:20:09.708Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/08/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/05/10/%E5%88%9B%E5%BB%BA%E7%A7%81%E4%BA%BA%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
         </p>
       
 
